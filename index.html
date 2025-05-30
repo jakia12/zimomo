@@ -32,12 +32,28 @@
       /* body {
         font-family: "Pulang" !important;
       } */
+      .body-image {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+          url("./images/cel2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
       .empty-div {
         min-height: 85vh;
       }
-      @media screen and (max-width:767px) {
-        .empty-div{
-          min-height: 65vh;
+      @media screen and (max-width: 767px) {
+        .body-image {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+          url("./images/zimomomobile.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+        .empty-div {
+          min-height: 70vh;
         }
       }
     </style>
@@ -119,17 +135,7 @@
     </style>
   </head>
 
-  <body
-    style="
-      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-        url('./images/cel2.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    "
-    class="text-contrast bg-neutral font-sans"
-  >
+  <body class="text-contrast bg-neutral font-sans body-image">
     <div id="kenburns-bg"></div>
 
     <header class="w-full z-30 text-neutral">
@@ -138,7 +144,14 @@
           class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 relative"
         >
           <!-- Logo (Center) -->
-          <div style="display: flex; justify-content: flex-start; align-items: center; gap: 5px;">
+          <div
+            style="
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 5px;
+            "
+          >
             <a href="/">
               <img
                 class="w-[85px] md:w-[100px]"
@@ -146,14 +159,15 @@
                 alt=""
               />
             </a>
-            <h1 style="font-family: Titan;" class="text-4xl text-[#fff]  lg:block hidden">
+            <h1
+              style="font-family: Titan"
+              class="text-4xl text-[#fff] lg:block hidden"
+            >
               Zimomo
             </h1>
           </div>
 
-          <div>
-            
-          </div>
+          <div></div>
 
           <!-- Buy Now Button (Right) -->
           <div class="">
@@ -176,7 +190,12 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span style="font-family: Poppins;" class="btn-content-inner" label="Rewards"> </span>
+                        <span
+                          style="font-family: Poppins"
+                          class="btn-content-inner"
+                          label="Rewards"
+                        >
+                        </span>
                       </span>
                     </span>
                   </span>
@@ -189,7 +208,11 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span style="font-family: Poppins;" class="btn-content-inner" label="Telegram">
+                        <span
+                          style="font-family: Poppins"
+                          class="btn-content-inner"
+                          label="Telegram"
+                        >
                         </span>
                       </span>
                     </span>
@@ -204,7 +227,12 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span style="font-family: Poppins;" class="btn-content-inner" label="X"> </span>
+                        <span
+                          style="font-family: Poppins"
+                          class="btn-content-inner"
+                          label="X"
+                        >
+                        </span>
                       </span>
                     </span>
                   </span>
@@ -272,13 +300,14 @@
           class="bg-white border-4 border-[#5e17eb] rounded-xl mt-[-60px] px-4 py-2 relative max-w-xl lg:max-w-2xl mx-auto"
         >
           <div class="flex items-center justify-center gap-2 text-[#5e17eb]">
-            <h2 style="font-family: Titan;" class="text-xl">
+            <h2 style="font-family: Titan" class="text-xl">
               CA:
-              <span style="font-family: Poppins;" id="wallet-short"
+              <span style="font-family: Poppins" id="wallet-short"
                 >0x72be0291cd9eaea855750d382f7ab5d601094444</span
               >
             </h2>
-            <button style="font-family: Titan;"
+            <button
+              style="font-family: Titan"
               onclick="copyAddress()"
               class="text-white bg-[#5e17eb] px-2 py-1 rounded hover:bg-[#805000]"
             >
@@ -288,7 +317,8 @@
         </div>
 
         <!-- Notification -->
-        <div style="font-family: Titan;"
+        <div
+          style="font-family: Titan"
           id="copy-notification"
           class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#5e17eb] text-white px-6 py-3 rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50"
         >
@@ -328,9 +358,7 @@
           alt=""
           style="margin-bottom: 71px"
         /> -->
-        <div class="empty-div">
-
-        </div>
+        <div class="empty-div"></div>
         <!-- <h1 style="font-family: Titan;" class="text-center text-4xl md:text-8xl text-[#fff] mt-[-60px]">
           WELCOME TO Zimomo !
         </h1> -->
@@ -339,13 +367,14 @@
           class="bg-white border-4 border-[#5e17eb] rounded-xl mt-4 px-4 py-2 relative"
         >
           <div class="flex items-center justify-center gap-2 text-[#5e17eb]">
-            <h2 style="font-family: Titan;" class="text-[12px]">
+            <h2 style="font-family: Titan" class="text-[12px]">
               CA:
-              <span style="font-family: Poppins;" id="wallet-short"
+              <span style="font-family: Poppins" id="wallet-short"
                 >0x72be0291cd9eaea855750d382f7ab5d601094444</span
               >
             </h2>
-            <button style="font-family: Titan;"
+            <button
+              style="font-family: Titan"
               onclick="copyAddress()"
               class="text-white bg-[#5e17eb] px-2 py-1 rounded hover:bg-[#805000]"
             >
@@ -355,7 +384,8 @@
         </div>
 
         <!-- Notification -->
-        <div style="font-family: Titan;"
+        <div
+          style="font-family: Titan"
           id="copy-notification"
           class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#5e17eb] text-white px-6 py-3 rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50"
         >
@@ -436,7 +466,8 @@
 
     <!-- Footer -->
     <footer
-      class="py-6 text-center text-md text-neutral bg-[#5e17eb] border-t-4 border-[#5e17eb] mt-[16px]" style="font-family: Poppins;"
+      class="py-6 text-center text-md text-neutral bg-[#5e17eb] border-t-4 border-[#5e17eb] mt-[16px]"
+      style="font-family: Poppins"
     >
       &copy; 2025 Zimomo. All rights reserved.
     </footer>

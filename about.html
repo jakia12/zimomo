@@ -32,6 +32,24 @@
       /* body {
         font-family: "Pulang" !important;
       } */
+      .body-image {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+          url("./images/cel2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      @media screen and (max-width:767px) {
+        .body-image {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+          url("./images/zimomomobile.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      }
     </style>
 
     <script>
@@ -111,15 +129,8 @@
   </head>
 
   <body
-    style="
-      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-        url('./images/cel2.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    "
-    class="text-contrast bg-neutral font-sans"
+   
+    class="text-contrast bg-neutral font-sans body-image"
   >
     <div id="kenburns-bg"></div>
 
@@ -129,7 +140,14 @@
           class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 relative"
         >
           <!-- Logo (Center) -->
-          <div style="display: flex; justify-content: space-around; align-items: center; gap: 5px;">
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              gap: 5px;
+            "
+          >
             <a href="/">
               <img
                 class="w-[90px] md:w-[100px]"
@@ -139,7 +157,7 @@
             </a>
             <h1
               style="font-family: Titan"
-              class="text-4xl text-[#fff]  lg:block hidden"
+              class="text-4xl text-[#fff] lg:block hidden"
             >
               Zimomo
             </h1>
@@ -245,7 +263,9 @@
         <!-- Right Column (Content) -->
 
         <div class="w-full md:w-full my-[8%]">
-          <div class="bg-white rounded-xl border-4 border-[#5e17eb] py-[8%] px-[50px]">
+          <div
+            class="bg-white rounded-xl border-4 border-[#5e17eb] py-[8%] px-[50px]"
+          >
             <h2
               style="font-family: Titan"
               class="lg:text-[50px] text-2xl font-bold mb-[3rem] text-[#5e17eb]"
