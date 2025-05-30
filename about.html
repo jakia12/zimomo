@@ -22,12 +22,16 @@
 
     <style>
       @font-face {
-        font-family: "Pulang";
-        src: url("./Pulang.otf");
+        font-family: "Titan";
+        src: url("./TitanOne-Regular.ttf");
       }
-      body {
+      @font-face {
+        font-family: "Poppins";
+        src: url("./Poppins-Medium.ttf");
+      }
+      /* body {
         font-family: "Pulang" !important;
-      }
+      } */
     </style>
 
     <script>
@@ -136,7 +140,10 @@
           </div>
 
           <div>
-            <h1 class="text-4xl text-[#693600] md:pl-[22%] lg:block hidden">
+            <h1
+              style="font-family: Titan"
+              class="text-4xl text-[#693600] md:pl-[22%] lg:block hidden"
+            >
               Zimomo
             </h1>
           </div>
@@ -149,7 +156,7 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span class="btn-content-inner" label="Home"> </span>
+                        <span style="font-family: Poppins;" class="btn-content-inner" label="Home"> </span>
                       </span>
                     </span>
                   </span>
@@ -162,7 +169,7 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span class="btn-content-inner" label="Telegram">
+                        <span style="font-family: Poppins;" class="btn-content-inner" label="Telegram">
                         </span>
                       </span>
                     </span>
@@ -177,7 +184,7 @@
                   <span class="btn-inner">
                     <span class="content-wrapper">
                       <span class="btn-content">
-                        <span class="btn-content-inner" label="X"> </span>
+                        <span style="font-family: Poppins;" class="btn-content-inner" label="X"> </span>
                       </span>
                     </span>
                   </span>
@@ -206,30 +213,41 @@
         <!-- Right Column (Content) -->
 
         <div class="w-full md:w-1/2">
-          <div class="bg-white  rounded-xl border-4 border-[#693600] p-[50px]">
+          <div class="bg-white rounded-xl border-4 border-[#693600] p-[50px]">
             <h2
+              style="font-family: Titan"
               class="lg:text-[60px] text-2xl font-bold mb-[3rem] text-[#693600]"
             >
               About $ZIMOMO
             </h2>
-            <p class="text-white mb-4 text-2xl mt-5" style="color: #693600">
+            <p
+              class="text-white mb-4 text-2xl mt-5"
+              style="color: #693600; font-family: Poppins; text-align: left"
+            >
               At the center is ZIMOMO — the fearless leader of the LABUBU
               ecosystem. He represents strength, wisdom, and action. ZIMOMO
               doesn’t just lead — he makes sure the community moves forward
               together.
             </p>
-            <p class="text-white text-2xl" style="color: #693600">
+            <p
+              class="text-white text-2xl"
+              style="color: #693600; font-family: Poppins; text-align: left"
+            >
               ZIMOMO Mystery Machine The ZIMOMO Mystery Machine rewards loyal
               $ZIMOMO holders every time the market cap hits a new $1M
               milestone. At each milestone, 1% of the total supply is
               automatically distributed to holders according to the holding
               amount — no staking, no claiming. The more you hold, the more you
-              earn.
+              earn. It’s simple, fair, and fully based on real growth and
+              community interests.
             </p>
-            <p class="text-white text-2xl" style="color: #693600">
-              Up to $10M = 10% total supply distributed. It’s simple, fair, and
-              fully based on real growth and community interests. Long-term
-              holders win, and every milestone becomes a community celebration..
+            <br>
+            <p
+              class="text-white text-2xl"
+              style="color: #693600; font-family: Poppins; text-align: left"
+            >
+              Long-term holders win, and every milestone becomes a community
+              celebration.
             </p>
 
             <a
