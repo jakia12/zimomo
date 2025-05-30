@@ -91,10 +91,10 @@ body {
   padding-top: 0;
 }
 .retro-btn.primary .btn .btn-inner .content-wrapper:before {
-  background-color: #5e17eb;
+  background-color: #ffbb00;
 }
 .retro-btn.primary .btn .btn-inner .content-wrapper .btn-content {
-  background-color: #5e17eb;
+  background-color: #ffbb00;
 }
 .retro-btn.secondary .btn .btn-inner .content-wrapper:before {
   background-color: #263238;
