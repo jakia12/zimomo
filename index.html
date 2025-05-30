@@ -28,6 +28,9 @@
       body {
         font-family: "Pulang" !important;
       }
+      .empty-div{
+        min-height: 60vh;
+      }
     </style>
 
     <script>
@@ -66,7 +69,7 @@
         width: 100%;
         height: 100%;
         /* background: url(/images/bcg.png); */
-        background: linear-gradient(to bottom, skyblue, greenyellow, brown);
+        /* background: linear-gradient(to bottom, skyblue, greenyellow, brown); */
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.75;
@@ -107,7 +110,7 @@
     </style>
   </head>
 
-  <body class="text-contrast bg-neutral font-sans">
+  <body style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('./images/ban.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;" class="text-contrast bg-neutral font-sans">
     <div id="kenburns-bg"></div>
 
     <header class="w-full z-30 text-neutral">
@@ -127,7 +130,7 @@
           </div>
 
           <div>
-            <h1 class="text-4xl text-[#693600] md:pl-[22%] lg:block hidden">
+            <h1 class="text-4xl text-[#fff] md:pl-[22%] lg:block hidden">
               Zimomo
             </h1>
           </div>
@@ -214,14 +217,17 @@
         <!-- <img class="absolute z-40 animate-rotate" src="/images/1.png" alt=""> -->
 
         <!-- herooo1 on top (static) -->
-        <img
+        <!-- <img
           class="lg:w-[85%] w-[90%] rounded-lg py-[20px]"
           src="/images/ban.png"
           alt=""
           style="margin: 0 auto"
-        />
+        /> -->
+        <div class="empty-div">
 
-        <h1 class="text-center text-4xl md:text-8xl text-[#693600] mb-20">
+        </div>
+
+        <h1 class="text-center text-4xl md:text-8xl text-[#fff] mb-20">
           WELCOME TO ZIMOMO
         </h1>
 
@@ -285,7 +291,7 @@
           alt=""
           style="margin-bottom: 71px"
         />
-        <h1 class="text-center text-4xl md:text-8xl text-[#693600] mt-[-60px]">
+        <h1 class="text-center text-4xl md:text-8xl text-[#fff] mt-[-60px]">
           WELCOME TO Zimomo !
         </h1>
 
