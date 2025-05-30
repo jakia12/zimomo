@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zimomo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="/images/logo transparent (3).png" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Slackey"', "sans-serif"],
+            },
+            colors: {
+              primary: "#822FA8",
+              accent: "#D88C4A",
+              soft: "#F8E9D1",
+              neutral: "#FFF6ED",
+              contrast: "#1E1E1E",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* Ken Burns background container */
+      #kenburns-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/bcg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.75;
+        z-index: -2;
+        animation: kenburns 10s ease-in-out infinite alternate;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 1s ease-in-out infinite;
+      }
+
+      @keyframes float-inverse {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(10px);
+        }
+      }
+
+      .animate-float-inverse {
+        animation: float-inverse 1s ease-in-out infinite;
+      }
+    </style>
+  </head>
+
+  <body class="text-contrast bg-neutral font-sans">
+    <div id="kenburns-bg"></div>
+
+    <header class="w-full z-30 text-neutral">
+      <div>
+        <div
+          class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 relative"
+        >
+          <!-- Logo (Center) -->
+          <div>
+            <img
+              class="w-[65px] md:w-[80px]"
+              src="/images/logo transparent (3).png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <h1 class="text-4xl text-[#693600] md:pl-[22%] lg:block hidden">
+              Zimomo
+            </h1>
+          </div>
+
+          <!-- Buy Now Button (Right) -->
+          <div class="">
+            <div class="wrapper">
+              <div role="button" class="retro-btn lg primary">
+                <a href="/" class="btn" style="width: 95px !important">
+                  <span class="btn-inner">
+                    <span class="content-wrapper">
+                      <span class="btn-content">
+                        <span class="btn-content-inner" label="Home"> </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+                <a
+                  href="about.html"
+                  class="btn"
+                  style="width: 100px !important"
+                >
+                  <span class="btn-inner">
+                    <span class="content-wrapper">
+                      <span class="btn-content">
+                        <span class="btn-content-inner" label="About"> </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+                <a
+                  href="ttlink"
+                  target="_blank"
+                  class="btn"
+                  style="width: 50px !important"
+                >
+                  <span class="btn-inner">
+                    <span class="content-wrapper">
+                      <span class="btn-content">
+                        <span class="btn-content-inner" label="X"> </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- about section -->
+    <section class="lg:py-[10] pb-[60px] lg:pb-[0px] px-4 md:px-10">
+      <div
+        class="container mx-auto flex flex-col md:flex-row gap-8 justify-center items-center"
+      >
+        <!-- Left Column (Image) -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="/images/1.png"
+            alt="About Image"
+            class="lg:w-[90%] w-full h-auto rounded-lg mb-[40px]"
+          />
+        </div>
+
+        <!-- Right Column (Content) -->
+
+        <div class="w-full md:w-1/2">
+          <div class="bg-white rounded-xl border-4 border-[#693600] p-[50px]">
+            <h2 class="lg:text-[60px] text-2xl font-bold mb-4 text-[#693600]">
+              About $ZIMOMO
+            </h2>
+            <p class="text-gray-600 mb-4" style="color: #693600">
+              At the center is ZIMOMO — the fearless leader of the LABUBU
+              ecosystem. He represents strength, wisdom, and action. ZIMOMO
+              doesn’t just lead — he makes sure the community moves forward
+              together.
+            </p>
+            <p class="text-gray-600" style="color: #693600">
+              ZIMOMO Mystery Machine The ZIMOMO Mystery Machine rewards loyal
+              $ZIMOMO holders every time the market cap hits a new $1M
+              milestone. At each milestone, 1% of the total supply is
+              automatically distributed to holders according to the holding
+              amount — no staking, no claiming. The more you hold, the more you
+              earn.
+            </p>
+            <p class="text-gray-600" style="color: #693600">
+              Up to $10M = 10% total supply distributed. It’s simple, fair, and
+              fully based on real growth and community interests. Long-term
+              holders win, and every milestone becomes a community celebration..
+            </p>
+
+            <a
+              href="Buylink"
+              target="_blank"
+              class="btn"
+              style="width: 165px !important"
+            >
+              <span class="btn-inner">
+                <span class="content-wrapper">
+                  <span class="btn-content">
+                    <span class="btn-content-inner" label="BuyNow"> </span>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-md text-neutral bg-[#B06100] border-t-4 border-[#693600] mt-[16px]"
+    >
+      &copy; 2025 Zimomo. All rights reserved.
+    </footer>
+
+    <script src="button.js"></script>
+  </body>
+</html>
