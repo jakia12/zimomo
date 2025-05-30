@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zimomo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="/images/logo transparent (3).png" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Slackey"', "sans-serif"],
+            },
+            colors: {
+              primary: "#822FA8",
+              accent: "#D88C4A",
+              soft: "#F8E9D1",
+              neutral: "#FFF6ED",
+              contrast: "#1E1E1E",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* Ken Burns background container */
+      #kenburns-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/bcg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.75;
+        z-index: -2;
+        animation: kenburns 10s ease-in-out infinite alternate;
+        pointer-events: none;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 1s ease-in-out infinite;
+      }
+
+      @keyframes float-inverse {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(10px);
+        }
+      }
+
+      .animate-float-inverse {
+        animation: float-inverse 1s ease-in-out infinite;
+      }
+    </style>
+  </head>
+
+  <body class="text-contrast bg-neutral font-sans">
+    <div id="kenburns-bg"></div>
+
+    <header class="w-full z-30 text-neutral">
+      <div>
+        <div
+          class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 relative"
+        >
+          <!-- Logo (Center) -->
+          <div>
+            <img
+              class="w-[65px] md:w-[80px]"
+              src="/images/logo transparent (3).png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <h1 class="text-4xl text-[#693600] md:pl-[22%]">Zimomo</h1>
+          </div>
+
+          <!-- Buy Now Button (Right) -->
+          <div class="">
+            <div class="wrapper">
+              <div role="button" class="retro-btn lg primary">
+                <a
+                  href="ttlink"
+                  target="_blank"
+                  class="btn"
+                  style="width: 50px !important"
+                >
+                  <span class="btn-inner">
+                    <span class="content-wrapper">
+                      <span class="btn-content">
+                        <span class="btn-content-inner" label="X"> </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+
+                <a
+                  href="whitepaperlink"
+                  target="_blank"
+                  class="btn"
+                  style="width: 165px !important"
+                >
+                  <span class="btn-inner">
+                    <span class="content-wrapper">
+                      <span class="btn-content">
+                        <span class="btn-content-inner" label="Whitepaper">
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative flex justify-center items-center text-center px-4 bg-transparent md:h-fit md:mt-0"
+    >
+      <div class="relative hidden md:block">
+        <!-- herooo3 at bottom (rotate right and back) -->
+        <!-- <img class="absolute z-0 animate-float" src="/images/3.png" alt="" /> -->
+
+        <!-- herooo2 in middle (rotate left and back) -->
+        <!-- <img
+          class="absolute z-10 animate-float-inverse"
+          src="/images/2.png"
+          alt=""
+        /> -->
+
+        <!-- <img class="absolute z-40 animate-float" src="/images/hero4.png" alt=""> -->
+
+        <!-- <img class="absolute z-40 animate-rotate" src="/images/1.png" alt=""> -->
+
+        <!-- herooo1 on top (static) -->
+        <img class="relative z-30" src="/images/1.png" alt="" />
+
+        <h1 class="text-center text-4xl md:text-8xl text-[#693600] mb-20">
+          WELCOME TO ZIMOMO
+        </h1>
+
+        <div
+          class="bg-white border-4 border-[#693600] rounded-xl mt-[-60px] px-4 py-2 relative max-w-xl mx-auto"
+        >
+          <div class="flex items-center justify-center gap-2 text-[#693600]">
+            <h2 class="text-2xl">
+              CA: <span id="wallet-short">xxxxxxxx</span>
+            </h2>
+            <button
+              onclick="copyAddress()"
+              class="text-white bg-[#693600] px-2 py-1 rounded hover:bg-[#805000]"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Notification -->
+        <div
+          id="copy-notification"
+          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#693600] text-white px-6 py-3 rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50"
+        >
+          COPIED!
+        </div>
+      </div>
+
+      <div class="relative block md:hidden">
+        <!-- herooo3 at bottom (rotate right and back) -->
+        <img class="absolute z-0" src="/images/cel1.png" alt="" />
+
+        <!-- herooo2 in middle (rotate left and back) -->
+        <img
+          class="absolute z-10 animate-float"
+          src="/images/cel3.png"
+          alt=""
+        />
+
+        <!-- herooo2 in middle (rotate left and back) -->
+        <!-- <img class="absolute z-20" src="/images/cel4.png" alt="" /> -->
+
+        <!-- herooo2 in middle (rotate left and back) -->
+        <!-- <img
+          class="absolute z-30 animate-float-inverse"
+          src="/images/cel5.png"
+          alt=""
+        /> -->
+
+        <!-- <img class="absolute z-40 animate-float" src="/images/hero4.png" alt=""> -->
+
+        <!-- <img class="absolute z-40 animate-rotate" src="/images/1.png" alt=""> -->
+
+        <!-- herooo1 on top (static) -->
+        <!-- <img class="relative z-60" src="/images/cel2.png" alt="" /> -->
+        <h1 class="text-center text-4xl md:text-8xl text-[#693600] mt-[-60px]">
+          WELCOME TO Zimomo !
+        </h1>
+
+        <div
+          class="bg-white border-4 border-[#693600] rounded-xl mt-4 px-4 py-2 relative"
+        >
+          <div class="flex items-center justify-center gap-2 text-[#693600]">
+            <h2 class="text-2xl">
+              CA: <span id="wallet-short">xxxxxxxxxx</span>
+            </h2>
+            <button
+              onclick="copyAddress()"
+              class="text-white bg-[#693600] px-2 py-1 rounded hover:bg-[#805000]"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Notification -->
+        <div
+          id="copy-notification"
+          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#693600] text-white px-6 py-3 rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50"
+        >
+          COPIED!
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 mt-4">
+      <div class="md:flex justify-between max-w-xl mx-auto gap-4">
+        <div
+          class="text-center p-4 w-full bg-white rounded-xl mb-4 md:mb-20 border-4 border-[#693600]"
+        >
+          <div class="text-3xl mb-2 text-[#693600]">
+            Ticker:
+            <p>Zimomo</p>
+          </div>
+        </div>
+
+        <div
+          class="text-center p-4 w-full bg-white rounded-xl mb-20 border-4 border-[#693600]"
+        >
+          <div class="text-3xl text-[#693600]">
+            Supply:
+            <p>1B</p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Function to format number with commas (e.g., 1013477 -> 1,013,477)
+        function formatNumber(num) {
+          return Math.round(num)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // Fetch data from the API
+        fetch(
+          "https://api.geckoterminal.com/api/v2/simple/networks/solana/token_price/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?include_market_cap=true&mcap_fdv_fallback=true",
+          {
+            headers: {
+              accept: "application/json",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const tokenPrice = parseFloat(
+              data.data.attributes.token_prices[
+                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              ]
+            );
+            const marketCap = parseFloat(
+              data.data.attributes.market_cap_usd[
+                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              ]
+            );
+
+            const formattedPrice = tokenPrice.toFixed(6);
+            const formattedMarketCap = formatNumber(marketCap);
+
+            document.querySelector(".price").textContent = `$${formattedPrice}`;
+            document.querySelector(
+              ".market-cap"
+            ).textContent = `$${formattedMarketCap}`;
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+            document.querySelector(".price").textContent = "Token Price: Error";
+            document.querySelector(".market-cap").textContent =
+              "Market Cap: Error";
+          });
+      </script>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-md text-neutral bg-[#B06100] border-t-4 border-[#693600] mt-[16px]"
+    >
+      &copy; 2025 Zimomo. All rights reserved.
+    </footer>
+
+    <script src="button.js"></script>
+  </body>
+</html>
