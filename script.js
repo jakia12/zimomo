@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function copyAddress() {
-  const fullAddress = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+  const fullAddress = "0x72be0291cd9eaea855750d382f7ab5d601094444";
   navigator.clipboard.writeText(fullAddress).then(() => {
     const notification = document.getElementById("copy-notification");
     notification.classList.remove("opacity-0");
@@ -78,7 +78,7 @@ function formatNumber(num) {
 
 function fetchTokenData() {
   fetch(
-    "https://api.geckoterminal.com/api/v2/simple/networks/solana/token_price/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?include_market_cap=true&mcap_fdv_fallback=true",
+    "https://api.geckoterminal.com/api/v2/simple/networks/bsc/token_price/0x72be0291cd9eaea855750d382f7ab5d601094444?include_market_cap=true&mcap_fdv_fallback=true",
     {
       headers: {
         accept: "application/json",
@@ -88,10 +88,10 @@ function fetchTokenData() {
     .then((response) => response.json())
     .then((data) => {
       const tokenPrice = parseFloat(
-        data.data.attributes.token_prices["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"]
+        data.data.attributes.token_prices["0x72be0291cd9eaea855750d382f7ab5d601094444"]
       );
       const marketCap = parseFloat(
-        data.data.attributes.market_cap_usd["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"]
+        data.data.attributes.market_cap_usd["0x72be0291cd9eaea855750d382f7ab5d601094444"]
       );
 
       const formattedPrice = tokenPrice.toFixed(6);

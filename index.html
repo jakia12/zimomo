@@ -350,7 +350,7 @@
 
         // Fetch data from the API
         fetch(
-          "https://api.geckoterminal.com/api/v2/simple/networks/solana/token_price/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?include_market_cap=true&mcap_fdv_fallback=true",
+          "https://api.geckoterminal.com/api/v2/simple/networks/bsc/token_price/0x72be0291cd9eaea855750d382f7ab5d601094444?include_market_cap=true&mcap_fdv_fallback=true",
           {
             headers: {
               accept: "application/json",
@@ -361,12 +361,12 @@
           .then((data) => {
             const tokenPrice = parseFloat(
               data.data.attributes.token_prices[
-                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                "0x72be0291cd9eaea855750d382f7ab5d601094444"
               ]
             );
             const marketCap = parseFloat(
               data.data.attributes.market_cap_usd[
-                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                "0x72be0291cd9eaea855750d382f7ab5d601094444"
               ]
             );
 
