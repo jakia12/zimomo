@@ -35,6 +35,11 @@
       .empty-div {
         min-height: 85vh;
       }
+      @media screen and (max-width:767px) {
+        .empty-div{
+          min-height: 65vh;
+        }
+      }
     </style>
 
     <script>
@@ -317,12 +322,15 @@
         <!-- <img class="absolute z-40 animate-rotate" src="/images/1.png" alt=""> -->
 
         <!-- herooo1 on top (static) -->
-        <img
+        <!-- <img
           class="relative z-60"
           src="/images/cel2.png"
           alt=""
           style="margin-bottom: 71px"
-        />
+        /> -->
+        <div class="empty-div">
+
+        </div>
         <!-- <h1 style="font-family: Titan;" class="text-center text-4xl md:text-8xl text-[#fff] mt-[-60px]">
           WELCOME TO Zimomo !
         </h1> -->
@@ -331,7 +339,7 @@
           class="bg-white border-4 border-[#5e17eb] rounded-xl mt-4 px-4 py-2 relative"
         >
           <div class="flex items-center justify-center gap-2 text-[#5e17eb]">
-            <h2 style="font-family: Titan;" class="text-sm">
+            <h2 style="font-family: Titan;" class="text-[12px]">
               CA:
               <span style="font-family: Poppins;" id="wallet-short"
                 >0x72be0291cd9eaea855750d382f7ab5d601094444</span
